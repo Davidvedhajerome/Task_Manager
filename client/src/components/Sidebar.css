@@ -1,0 +1,148 @@
+.sidebar {
+  width: 270px;
+  background: #fff;
+  color: #222;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  transition: width 0.2s, background 0.2s, color 0.2s;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.04);
+}
+.sidebar.collapsed {
+  width: 60px;
+}
+.sidebar.dark {
+  background: #232323;
+  color: #eee;
+}
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+.sidebar-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  cursor: pointer;
+  color: inherit;
+}
+.sidebar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+.logo-icon {
+  font-size: 1.5rem;
+}
+.sidebar-actions {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.sidebar-btn {
+  background: #f3f3f3;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: inherit;
+  transition: background 0.2s;
+}
+.sidebar-btn:hover {
+  background: #e0e0e0;
+}
+.sidebar.dark .sidebar-btn {
+  background: #2c2c2c;
+}
+.sidebar.dark .sidebar-btn:hover {
+  background: #444;
+}
+.sidebar-nav {
+  flex: 1;
+  padding: 1rem 0.5rem 0 1rem;
+}
+.sidebar-section {
+  font-size: 0.95rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  color: inherit;
+  text-decoration: none;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.sidebar-link.active, .sidebar-link:hover {
+  background: #e6f0ff;
+  color: #007bff;
+}
+.sidebar.dark .sidebar-link.active, .sidebar.dark .sidebar-link:hover {
+  background: #333b4a;
+  color: #4ea1ff;
+}
+.count {
+  background: #eee;
+  color: #888;
+  border-radius: 12px;
+  font-size: 0.85rem;
+  padding: 0 0.5em;
+  margin-left: 0.5em;
+}
+.sidebar.dark .count {
+  background: #333;
+  color: #bbb;
+}
+.sidebar-signin {
+  padding: 1rem;
+}
+.sidebar-footer {
+  padding: 1rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.theme-toggle {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
+}
+.footer-links {
+  margin-bottom: 0.3rem;
+}
+.footer-links a {
+  color: inherit;
+  text-decoration: none;
+  margin: 0 0.2em;
+  font-size: 0.95em;
+}
+.footer-copy {
+  color: #aaa;
+  font-size: 0.85em;
+}
+@media (max-width: 900px) {
+  .sidebar {
+    position: fixed;
+    z-index: 2000;
+    height: 100vh;
+  }
+} 

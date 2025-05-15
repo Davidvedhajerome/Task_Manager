@@ -1,0 +1,97 @@
+.headerbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem 1rem 2rem;
+  background: #18191c;
+  color: #fff;
+  border-bottom: 1px solid #232323;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.headerbar.dark {
+  background: #18191c;
+  color: #fff;
+}
+.headerbar-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: lowercase;
+}
+.headerbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.dropdown {
+  position: relative;
+}
+.dropdown-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+.dropdown-btn:hover, .dropdown-menu button.active {
+  background: #232323;
+}
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 2.2rem;
+  background: #232323;
+  color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  min-width: 180px;
+  padding: 0.5rem 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+}
+.dropdown-menu button {
+  background: none;
+  border: none;
+  color: inherit;
+  text-align: left;
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 0;
+  transition: background 0.2s;
+}
+.dropdown-menu button:hover {
+  background: #333b4a;
+}
+.filter-menu {
+  min-width: 220px;
+}
+.filter-title {
+  font-weight: bold;
+  padding: 0.5rem 1.2rem 0.2rem 1.2rem;
+  color: #4ea1ff;
+}
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.5rem 1.2rem 0.7rem 1.2rem;
+}
+.filter-group label {
+  font-size: 1rem;
+  color: #eee;
+  cursor: pointer;
+}
+.filter-group input[type="checkbox"] {
+  margin-right: 0.5em;
+}
+@media (max-width: 900px) {
+  .headerbar {
+    padding-left: 70px;
+  }
+} 

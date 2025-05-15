@@ -1,0 +1,70 @@
+.task-details-panel-overlay {
+  position: fixed;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 3000;
+  display: flex;
+  justify-content: flex-end;
+}
+.task-details-panel {
+  background: #232323;
+  color: #fff;
+  width: 400px;
+  max-width: 100vw;
+  height: 100vh;
+  padding: 2rem 2rem 2rem 2rem;
+  box-shadow: -2px 0 16px rgba(0,0,0,0.18);
+  position: relative;
+  overflow-y: auto;
+  animation: slideInPanel 0.2s;
+}
+@keyframes slideInPanel {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.details-title-input, .details-desc-input {
+  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  padding: 0.5em;
+  border-radius: 4px;
+  border: 1px solid #444;
+  background: #18191c;
+  color: #fff;
+}
+.details-row {
+  margin-bottom: 1rem;
+}
+.details-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.edit-btn, .delete-btn, .save-btn {
+  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.edit-btn { background: #007bff; color: #fff; }
+.delete-btn { background: #dc3545; color: #fff; }
+.save-btn { background: #28a745; color: #fff; }
+.details-subtasks-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1rem;
+}
+.subtask-completed {
+  text-decoration: line-through;
+  color: #aaa;
+} 
